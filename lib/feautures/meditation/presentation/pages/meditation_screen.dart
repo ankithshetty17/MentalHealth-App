@@ -20,7 +20,9 @@ class MeditationScreen extends StatelessWidget {
           SizedBox(width: 10),
         ],
       ),
-      body: Padding(padding: EdgeInsets.all(20),
+      body:SingleChildScrollView(
+        child:
+       Padding(padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -42,9 +44,13 @@ class MeditationScreen extends StatelessWidget {
            SizedBox(height: 10,),
            Text('Today\'s Task',style: Theme.of(context).textTheme.titleMedium,),
            SizedBox(height: 10),
-           TaskCard(color: Colors.red, Taskname: 'dfskfjsfjlskjfljflfs', Onpressed: (){}, title: 'Morning'),
-          
+           TaskCard(color: DefaultColors.task1, Taskname: 'Lets open up to the things that matters among the people', Onpressed: (){}, title: 'Morning'),
+           SizedBox(height: 10,),
+           TaskCard(color: DefaultColors.task2, Taskname: 'Lets open up to the things that matters among the people', Onpressed: (){}, title: 'Afternoon'),
+           SizedBox(height: 10,),
+           TaskCard(color: DefaultColors.task3, Taskname: 'Lets open up to the things that matters among the people', Onpressed: (){}, title: 'Evening'),
         ],
+      ),
       ),
       ),
       );

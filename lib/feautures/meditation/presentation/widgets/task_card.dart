@@ -16,25 +16,41 @@ class TaskCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
-      width: double.infinity,
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color:color, 
+        color: color,
+        borderRadius: BorderRadius.circular(12)
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Row(
         children: [
-          Text(title),
-             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          SizedBox(width: 5,),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                     Text(
-                      Taskname,
-                     ),
-                     IconButton(onPressed: Onpressed, icon:Icon(Icons.arrow_forward_ios,color: Colors.white,size: 12,))
+                Text(
+                  title,
+                  style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 8,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        Taskname,
+                        style: Theme.of(context).textTheme.labelSmall,
+                      ),
+                    ),
+                   IconButton(onPressed:Onpressed, icon: Icon(Icons.arrow_forward_ios,))
+
+                  ],
+                )
               ],
-             )
+            ),
+          )
         ],
       ),
     );
