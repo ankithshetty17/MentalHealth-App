@@ -6,6 +6,15 @@ class MusicScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
+        appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: Image.asset('assets/down_arrow.png'),
+        actions: [
+          Image.asset('assets/transcript_icon.png.png'),
+          SizedBox(width: 10),
+        ],
+      ),
       body: Center(
         child: Text('Music'),
       ),
