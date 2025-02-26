@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mentalhealthapp/feautures/meditation/presentation/pages/meditation_screen.dart';
 import 'package:mentalhealthapp/feautures/music/presentation/pages/music_screen.dart';
+import 'package:mentalhealthapp/feautures/music/presentation/pages/playlist_screen.dart';
 import 'package:mentalhealthapp/presentation/bottomnavbar/bloc/navigation_bloc.dart';
 import 'package:mentalhealthapp/presentation/bottomnavbar/widgets/bottom_nav_bar.dart';
 
@@ -9,7 +10,8 @@ class HomeScreen extends StatelessWidget {
  HomeScreen({super.key});
  final List<Widget> pages = [
    MeditationScreen(),
-   MusicScreen()
+  //  MusicScreen(),
+  PlaylistScreen()
   ];
   
 
